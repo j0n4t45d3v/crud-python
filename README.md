@@ -28,6 +28,10 @@ Windows:
 ```
 nome_do_ambiente\Scripts\activate
 ```
+após inicializar a venv instale as dependencias 
+```
+pip install -r requirements.txt
+```
 agora rode com o comando:
 ```
 python app.py
