@@ -2,33 +2,8 @@
 Um CRUD feito em python usando o microframework Flask
 
 ## Rodando a API
-**primeiro crie uma venv**
 
-Linux e macOS:
-```
-  python3 -m venv nome-do-ambiente
-```
-
-Windows:
-```
-  python -m venv nome-do-ambiente
-```
-**Iniciando a venv**
-
-Linux e macOS:
-```
-source nome_do_ambiente/bin/activate
-```
-ou 
-```
-. /nome_do_ambiente/bin/activate
-```
-
-Windows:
-```
-nome_do_ambiente\Scripts\activate
-```
-após inicializar a venv instale as dependencias 
+Após inicializar um ambiente virtual instale as dependencias 
 ```
 pip install -r requirements.txt
 ```
