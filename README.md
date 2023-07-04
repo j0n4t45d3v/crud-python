@@ -17,16 +17,16 @@ python app.py
 ### _GET_
 - pega todos os usuarios
 ```
-/
+/users
 ```
 - pega um usuario
 ```
-/{id}
+/users/{id}
 ```
 ### _POST_
 - rota
 ```
-/
+/users
 ```
 - corpo da requisição 
 
@@ -41,7 +41,7 @@ python app.py
 ### _PUT_
 - rota
 ```
-/{id}
+/users/{id}
 ```
 - corpo da requisição 
 
@@ -55,5 +55,5 @@ python app.py
 ```
 ### _DELETE_
 ```
-/{id}
+/users/{id}
 ```
