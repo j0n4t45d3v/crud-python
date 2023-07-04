@@ -1,16 +1,11 @@
 from flask import Blueprint, request
-from controllers.UserController import UserController
+from user import user_module
 from database.db import Database
-from repositories.UserRepository import UserRepository
-
-from services.UserService import UserService
 
 app_route = Blueprint('routes', __name__)
 
 connection = Database()
-user_repository = UserRepository(connection)
-user_service = UserService(user_repository)
-user_controller = UserController(user_service)
+user_controller = user_module(connection)
 
 @app_route.route("/", methods=['GET'])
 def index():

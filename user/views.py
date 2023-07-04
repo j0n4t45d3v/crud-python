@@ -1,10 +1,10 @@
-from models.User import User
-from services.UserService import UserService
+from user.models import User
+from user.service import UserService
 from flask import make_response, jsonify
 
 
 class UserController:
-    def __init__(self, user_service:UserService) -> None:
+    def __init__(self, user_service: UserService) -> None:
         self.user_service = user_service
 
     def get(self):
@@ -28,7 +28,8 @@ class UserController:
         age = request['age']
         password = request['password']
 
-        new_user = User(id=None, age=age, name=name, email=email, password=password)
+        new_user = User(id=None, age=age, name=name,
+                        email=email, password=password)
 
         user_created = self.user_service.insert(new_user)
         response = make_response(user_created, 201)
@@ -40,7 +41,8 @@ class UserController:
         age = request['age']
         password = request['password']
 
-        new_user = User(id=id, age=age, name=name, email=email, password=password)
+        new_user = User(id=id, age=age, name=name,
+                        email=email, password=password)
 
         user_updated = self.user_service.update(new_user, id)
         response = make_response(user_updated, 200)

@@ -1,5 +1,4 @@
 import sqlite3
-from models.User import User
 
 
 class Database:
@@ -10,17 +9,16 @@ class Database:
     def connect_db(self):
         connect = self.db.open_connection()
         cur = connect.cursor()
-        cur.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER, name TEXT, age INTEGER, email TEXT, password TEXT)')
+        cur.execute(
+            'CREATE TABLE IF NOT EXISTS users (id INTEGER, name TEXT, age INTEGER, email TEXT, password TEXT)')
         self.db.confirm_operation(connect)
         self.db.close_connection(connect)
 
     def open_connection(self):
         return sqlite3.connect("./database/database.sqlite3")
 
-    def close_connection(self,connect):
+    def close_connection(self, connect):
         return connect.close()
 
-    def confirm_operation(self,connect):
+    def confirm_operation(self, connect):
         return connect.commit()
-
-

@@ -1,5 +1,6 @@
-from models.User import User
-from repositories.UserRepository import UserRepository
+from user.models import User
+from user.repository import UserRepository
+
 
 class UserService:
 

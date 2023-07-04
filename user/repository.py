@@ -1,5 +1,5 @@
 from database.db import Database
-from models.User import User
+from user.models import User
 
 class UserRepository:
     def __init__(self, db: Database):
